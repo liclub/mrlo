@@ -1,0 +1,96 @@
+@charset "utf-8";
+.zj-box{overflow: hidden;_zoom:1;background: #F0F0F0;width: 100%;    margin-bottom: -40px;}
+.zj-year{
+    float: left;
+    width: 81px;
+    text-align: center;
+    margin-top: 18px;
+}
+.zui-box{width: 940px;margin: 18px auto 0 auto;}
+.current{
+    width: 61px;
+    background: #f26868 url(../img/jian.png) 61px 0 no-repeat;
+    color: #FFF;
+    text-align: left;
+    padding-left: 9px;
+    height: 40px;
+    line-height: 42px;
+    font-size: 18px;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+.zj-year-li{
+    width: 61px;
+    height: 40px;
+    line-height: 42px;
+    background: #fff;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+.zj-detail{
+    width: 850px;
+    float: right;
+    background: url(../img/dian3.png) 139px 0 repeat-y;
+    margin: 10px 0 20px 0;
+}
+.zj-detail h3{
+    margin: 0 150px;
+    position: relative;
+    padding: 1px 0 0 12px;
+    font-style: italic;
+    font-family: Georgia;
+    color: #f26868;
+    font-size: 24px;
+}
+.zj-detail h3:before{
+    content: '';
+    background: url(../img/jian.png) -1px -54px no-repeat;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: -17px;
+    top: 6px;
+}
+.zj-detail li{
+    overflow: hidden;
+    _zoom: 1;
+    position: relative;
+}
+.zj-detail li span{
+    left: 35px;
+    position: relative;
+    font-size: 18px;
+    top: 19px;
+}
+.zj-detail li p{
+    float: right;
+    width: 700px;
+    background: url(../img/jian.png) -21px 0 no-repeat;
+    height: 50px;
+    margin: 10px 0 2px 0;
+    position: relative;
+}
+.zj-detail li p span{
+    margin: -20px 0 0 -26px;
+    background: #ffffff;
+    width: 660px;
+    height: 44px;
+    line-height: 44px;
+    display: block;
+    font-size: 18px;
+    text-indent: 20px;
+    overflow: hidden;
+    word-wrap:break-word;
+    word-break: break-all;
+}
+.zj-detail li p:before{
+    content: '';
+    background: url(../img/jian.png) 3px -91px no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -18px;
+    top: 11px;
+}

@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+* {margin: 0;outline: 0;padding: 0;}
+body {font-family: "Microsoft Yahei";margin: 0;padding: 0;color:#333;}
+body, form, ul, ol, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, table, fieldset, hr, div {margin: 0;padding: 0;}
+img {border: 0 none;}
+ul, ol, li {list-style-type: none;}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+:focus { outline: none; }
+a {outline: medium none;text-decoration: none;color:#333;display:inline-block;}
+a:hover{text-decoration: none;cursor:pointer;}
+em {font-style: normal;}
+i{font-style: normal;}
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;}
+.clear {zoom: 1;}
+*:focus {outline: none;}
+*{-webkit-tap-highlight-color: transparent;  border:0}
+.pull-left{float: left}
+.pull-right{float: right}
+header{width: 100%;height: 115px;}
+body{background: #ffffff}
+.logo-area{
+    width: 1050px;
+    height: 92px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: url("../img/pic-01.png") no-repeat;
+    background-size: 30%;
+    background-position: right;
+}
+.logo-area img{height: 100%;margin-top: 20px;}
+.logo-area span{display: inline-block;height: 100%;}
+.img-pic02{margin-left: 182px;}
+nav{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: #565757;
+    line-height: 45px;
+    z-index: 6;
+}
+nav ul{width: 80%;margin: 0 auto;position: absolute;left: 0;right: 0;
+}
+nav ul li{text-align: center;float: left;margin:0 30px 0 30px;}
+nav ul li a{ color: #fff;font-size:18px;padding: 0 15px}
+/*nav ul li a:hover{background:#f26868 }*/
+footer{
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    background: #565757;
+    line-height: 40px;
+    text-align: center;
+}
+.art-model{padding: 10px auto;border-bottom: 1px #ccc dashed;}
+.art-model h3{height: 46px;line-height: 46px;}
+.author-info{color: #ccc;font-size: 12px;height: 23px;line-height: 23px;}
+.art-model dl{margin-top: 10px;overflow: hidden}
+.art-model dl img{float: left;width: 184px;height: 139px;margin-right: 10px;}
+.art-model .lookArticle-a{
+    background: #f26868;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 30px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    float: right;
+}

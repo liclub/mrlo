@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>javascript实现简单的拖拽</title>
+    <link rel="stylesheet"  href="../../common/css/style.css">
+    <link rel="stylesheet"  href="../../common/css/xgwz.css">
+    <link rel="stylesheet"  href="../../common/css/index.css">
+    <link rel="stylesheet"  href="../../common/css/art-details.css">
+</head>
+<body>
+<header>
+    <div class="logo-area">
+        <span class="pull-left"><img src="../../common/img/logo.png"></span>
+        <span class="img-pic02"><img src="../../common/img/pic-02.png"></span>
+    </div>
+</header>
+<nav id="all-nav">
+    <ul>
+        <li><a href="../../index.html">首页</a></li>
+        <li><a style="background: #f26868" href="../../view/xwzj/xwzj.html">学无止境</a></li>
+        <li><a href="../../view/qwzt/qwzt.html">趣味杂谈</a></li>
+        <li><a href="../../view/zj/zj.html">足迹</a></li>
+        <li><a href="../../view/zp/zp.html">作品</a></li>
+        <li><a href="../../view/gywm/gywm.html">关于我们</a></li>
+        <li><a href="../../view/ly/ly.html">留言</a></li>
+    </ul>
+</nav>
+<section class="article-section">
+    <div class="article-aer">
+        <div class="article-title">
+            <span>当前位置:</span>&nbsp;&nbsp;<span>主页&nbsp;>&nbsp;学无止境&nbsp;>&nbsp;web前端&nbsp;>&nbsp;文章</span>
+        </div>
+        <div class="art-details">
+            <h3>Javascript实现简单的拖拽</h3>
+            <div class="author-detail">
+                <span class="fb-date">发布时间:2017-05094</span>
+                <span class="fb-name">作者:大叔</span>
+                <span class="fb-times">浏览次数:44</span>
+            </div>
+            <div class="details">
+                <p>拖拽的页面效果在于用户可以自由拖动盒子的位置。拖拽越来越多的被应用：</p>
+                <p>1.window桌面可以自由拖拽图标的位置。</p>
+                <p>2.浏览器选项卡自已自由拖动</p>
+                <img src="../../common/img/2-1F50420535Y43.png">
+                <p>3.网页中登录框</p>
+                <p>下面简单介绍一下拖拽的原理。一个div盒子在页面中的拖动为例</p>
+                <img src="../../common/img/2-1F50420545B36.jpg">
+                <p><strong>鼠标按下时</strong>，鼠标和div的相对位置已经确定，此时确定鼠标距离div的距离</p>
+                <p>鼠标按下点距离div左距离RL=鼠标按下坐标ml-div距离文档的左距离bl</p>
+                <p>鼠标按下点距离div上距离RT=鼠标按下坐标mt-div距离文档的上距离bt</p>
+                <p><strong>鼠标移动时</strong>，鼠标按下点和div的相对位置不变，根据鼠标按下位置和div的相对位置不变，计算div的最新位置。</p>
+                <p class="dm-code">
+                    div.style.left=鼠标坐标X-鼠标按下点距离div左距离RL；
+                    <br/>
+                    div.style.top=鼠标坐标Y-鼠标按下点距离div上距离RT；
+                </p>
+                <p><strong>鼠标释放时，</strong>取消鼠标移动事件。</p>
+                <p>下面先对div盒子布局</p>
+                <img src="../../common/img/111.png">
+                <img style="margin-top: -9px;" src="../../common/img/112.png">
+                <p>注意：当鼠标拖动div盒子太快时，鼠标会移出div，鼠标此时就不能拖动div盒子了，如何解决这个bug？
+                <p>改变绑定事件的对象，将oBox改成document，这样无论鼠标怎么拖动，都不会移出文档，代码改成如下：</p>
+                <img src="../../common/img/113.png">
+                <p>上面是没有限制范围的拖动，如果我们想在窗口中移动呢？只要做好范围的限制即可。</p>
+                <img src="../../common/img/115.png">
+                <img style="margin-top: -9px;" src="../../common/img/116.png">
+                <p>如果发现文章中有表述不准确或者有相关问题需要交流，可以在下面留言。</p>
+                <div class="zz-div">
+                    <span class="zanzhu">赞助</span>
+                </div>
+                <div class="ll-div">
+                    <p>上一篇：gulp学习之察言观色watch函数</p>
+                    <p>下一篇：没有了</p>
+                </div>
+                <div class="ll-div">
+                    <p>除非注明转载，本站文章均为原创，欢迎转载，转载请以链接形式注明出处</p>
+                    <p>本文地址：http://www.onmpw.com/tm/xwzj/web_239.html</p>
+                </div>
+            </div>
+            <div class="xgwz">
+                <div class="xgwz-title">相关文章</div>
+                <ul class="ar-ul">
+                    <li><a>我理解的webservice是这样的</a></li>
+                    <li><a>SSO单点登录三种情况的实现方式详解</a></li>
+                    <li><a>用CSS3实现单行文本溢出和多行文本溢出</a></li>
+                    <li><a>React入门 createClass使用说明</a></li>
+                    <li><a>React教程之传递Props——Transferring Props</a></li>
+                    <li><a>排序算法学习之路——希尔排序</a></li>
+                    <li><a>个人博客该何去何从</a></li>
+                    <li><a>Prototype Chain 原型链你知道多少</a></li>
+                    <li><a>程序员的工作经验真的有那么重要吗？</a></li>
+                    <li><a>linux安装apache过程中注意的问题</a></li>
+                    <li><a>PHP——json_encode中文编码问题</a></li>
+                    <li><a>移动端网页制作bug总结（一）</a></li>
+                </ul>
+                <ul class="point-ul">
+                    <li style="background: #565757" data-cuttrent="1" data-idx="0"></li>
+                    <li data-cuttrent="0" data-idx="1"></li>
+                    <li data-cuttrent="0" data-idx="2"></li>
+                </ul>
+            </div>
+            <div class="ly-div">2条留言</div>
+            <div class="ly-area">
+                <div class="pl-detail">
+                    <div class="pl-title">大师傅：&nbsp;&nbsp;说</div>
+                    <p class="pl-content">写的非常不错</p>
+                    <p class="pl-date">2017-05-05 |	引用</p>
+                </div>
+            </div>
+            <div class="fbly">
+                <p>您的留言</p>
+                <textarea></textarea>
+                <form>
+                    <label for="name">您的姓名:</label><input type="text" id="name"><br/>
+                    <label for="mail">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</label><input type="text" id="mail"><br/>
+                    <label for="wz">您的网址:</label><input type="text" id="wz">
+                </form>
+                <div class="bfbtn">发表</div>
+            </div>
+        </div>
+    </div>
+    <div class="fl">
+        <div class="search">
+            <input type="text" placeholder="请输入搜索内容" class="search-input"><input type="button" class="search-btn" value="搜索">
+        </div>
+        <div class="nav-xwzj">
+            <div class="nav-title">
+                <img class="pull-left" src="../../common/img/lm.png">
+                <span>栏目导航</span>
+            </div>
+            <ul>
+                <li><a>WEB前端</a></li>
+                <li><a>编程语言</a></li>
+                <li><a>网络</a></li>
+                <li><a>算法</a></li>
+                <li><a>数据库</a></li>
+                <li><a>操作系统</a></li>
+            </ul>
+        </div>
+        <div class="hot-art" style="float: none;margin-top: 46px;">
+            <h2 class="fonth2">
+                <img class="zanIcon" src="../../common/img/new.png">
+                <span>最新文章</span>
+            </h2>
+            <ul class="art-ul">
+                <li><a href="#">我对Paxos算法的理解</a></li>
+                <li><a href="#">Memcached中的分布式思想</a></li>
+                <li><a href="#">Consistent Hashing算法入门及PHP代码实现</a></li>
+                <li><a href="#">php zookeeper你需要知道的细节</a></li>
+                <li><a href="#">Node Stream 流（二）流的四种基本类型</a></li>
+                <li><a href="#">Node Stream 流（一）流的基本介绍及流下载文件</a></li>
+                <li><a href="#">Sweetalert详细介绍</a></li>
+                <li><a href="#">《苏菲的世界》读后感</a></li>
+            </ul>
+        </div>
+        <div class="suggest-art" style="margin-top: 26px;">
+            <h2 class="fonth2">
+                <img class="zanIcon" src="../../common/img/hot.png">
+                <span>热门文章</span>
+            </h2>
+            <ul class="art-ul">
+                <li><a href="#">React.createElement方法使用详解</a></li>
+                <li><a href="#">SSO单点登录三种情况的实现方式详解</a></li>
+                <li><a href="#">四大非关系型数据库类型，你知道多少</a></li>
+                <li><a href="#">React之ref回调函数实现的两种方式</a></li>
+                <li><a href="#">我理解的webservice是这样的</a></li>
+                <li><a href="#">post Upload上传文件中multipart/form-data 做的那些事</a></li>
+                <li><a href="#">webpack编译react需要注意的细节</a></li>
+                <li><a href="#">React组件refs详解</a></li>
+            </ul>
+            <h2 class="fonth2" style="margin-top: 20px">
+                <img class="zanIcon" src="../../common/img/bq.png">
+                <span>热门标签</span>
+            </h2>
+            <div class="tag">
+                <a href="#">Javascript</a>
+                <a href="#">数组</a>
+                <a href="#">个人博客</a>
+                <a href="#">WEB</a>
+                <a href="#">Gulp</a>
+                <a href="#">算法</a>
+                <a href="#">Paxos</a>
+                <a href="#">分布式</a>
+                <a href="#">跨域</a>
+                <a href="#">php</a>
+                <a href="#">单点登录</a>
+                <a href="#">网络</a>
+                <a href="#">socket</a>
+                <a href="#">protocol</a>
+                <a href="#">AUTH</a>
+                <a href="#">redis</a>
+                <a href="#">svn</a>
+                <a href="#">cluster</a>
+                <a href="#">SSO</a>
+                <a href="#">curl</a>
+                <a href="#">Cookie</a>
+                <a href="#">抽象类</a>
+                <a href="#">接口</a>
+                <a href="#">编程</a>
+                <a href="#">Mongodb</a>
+                <a href="#">ref</a>
+                <a href="#">个人网站</a>
+                <a href="#">webpack</a>
+                <a href="#">网站提速</a>
+                <a href="#">React</a>
+                <a href="#">响应式</a>
+                <a href="#">nodejs</a>
+                <a href="#">forever</a>
+                <a href="#">pm2</a>
+                <a href="#">扩展</a>
+                <a href="#">Jquery</a>
+                <a href="#">Xdebug</a>
+                <a href="#">css</a>
+                <a href="#">垂直居中</a>
+                <a href="#">前端</a>
+                <a href="#">git</a>
+                <a href="#">仓库</a>
+            </div>
+
+            <h2 class="fonth2" style="margin-top: 20px">
+                <img class="zanIcon" src="../../common/img/start.png">
+                <span>关注我们</span>
+            </h2>
+            <div class="erweima">
+                <img src="../../common/img/1494227563.png">
+                <p>扫一扫关注我们哦</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>Design By 大叔 </footer>
+</body>
+<script type='text/javascript' src='../../compents/jquery/jquery-1.12.1.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../common/js/nav.js' charset='utf-8'></script>
+<script type='text/javascript' src='../../common/js/art-detail.js' charset='utf-8'></script>
+</html>
